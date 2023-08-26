@@ -1,4 +1,9 @@
-BEGIN {
-    print "Implement this solution" > "/dev/stderr"
-    exit 1
+{
+    original = $0
+    reversed = ""
+
+    for (i = length(original); i >= 1; i--) {
+        reversed = reversed substr(original, i, 1)
+    }
+    print reversed
 }
